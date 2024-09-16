@@ -12,9 +12,7 @@ public class Item {
 	}
 	
 	public double costo() {
-		double result;
-		result = this.cantidad * this.costoUnitario;
-		return result;
+		return this.cantidad * this.costoUnitario;
 	}
 
 	public String getDetalle() {

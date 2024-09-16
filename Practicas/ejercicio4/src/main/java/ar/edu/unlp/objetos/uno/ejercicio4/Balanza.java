@@ -4,11 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Balanza extends Productos{
-	private Productos productos;
-	
-	public Balanza() {
-		this.productos = new Productos();
-	}
 	
 	public void ponerEnCero() {
 		this.getProductos().clear();

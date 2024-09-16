@@ -5,7 +5,6 @@ import java.util.List;
 
 public class Ticket extends Productos{
 	private LocalDate fecha;
-	private Productos productos;
 	
 	public Ticket(List<Producto> productos) {
 		this.fecha = LocalDate.now();

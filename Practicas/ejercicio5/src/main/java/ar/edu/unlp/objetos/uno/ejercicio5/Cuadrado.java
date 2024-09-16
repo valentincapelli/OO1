@@ -7,6 +7,10 @@ public class Cuadrado implements Figura{
 		this.lado = lado;
 	}
 	
+	public Cuadrado() {
+
+	}
+	
 	public double getArea() {
 		return lado * lado;
 	}
