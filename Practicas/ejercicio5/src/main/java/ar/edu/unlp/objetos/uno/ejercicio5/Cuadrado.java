@@ -3,12 +3,12 @@ package ar.edu.unlp.objetos.uno.ejercicio5;
 public class Cuadrado implements Figura{
 	private double lado;
 	
-	public Cuadrado(double lado) {
-		this.lado = lado;
-	}
-	
 	public Cuadrado() {
 
+	}
+
+	public Cuadrado(double lado) {
+		this.lado = lado;
 	}
 	
 	public double getArea() {

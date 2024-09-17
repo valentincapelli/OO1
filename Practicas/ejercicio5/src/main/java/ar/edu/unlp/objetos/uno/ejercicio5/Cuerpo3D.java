@@ -29,4 +29,12 @@ public class Cuerpo3D {
 		this.altura = altura;
 	}
 	
+	public double getSuperficieExterior() {
+		return (2 * this.caraBasal.getArea()) + (this.caraBasal.getPerimetro() * this.altura);
+	}
+
+	public double getVolumen() {
+		return this.caraBasal.getArea() * this.altura;
+	}
+
 }
