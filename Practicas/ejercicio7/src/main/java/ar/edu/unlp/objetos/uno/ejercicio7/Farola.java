@@ -8,7 +8,8 @@ public class Farola {
 	private List<Farola> neighbors;
 	
 	public Farola() {
-		
+		this.neighbors = new LinkedList<>();
+		this.interruptor = false;
 	}
 	
 	public List<Farola> getNeighbors() {
@@ -16,22 +17,37 @@ public class Farola {
 	}
 	
 	public void pairWithNeighbor(Farola farola) {
-		
+		this.pairNeighbor(farola);
+		farola.pairNeighbor(this);
 	}
 	
-	public boolean isOn(Farola farola) {
-		return false;
+	private void pairNeighbor(Farola farola) {
+		this.neighbors.add(farola);	
 	}
 	
-	public boolean isOff(Farola farola) {
-		return false;
+	public boolean isOn() {
+		return this.interruptor;
+	}
+	
+	public boolean isOff() {
+		return !this.isOn();
 	}
 	
 	public void turnOn() {
-		
+		if (this.isOff()) {
+			this.interruptor = true;
+			for (Farola farola : this.neighbors) {
+				farola.turnOn();
+			}
+		}
 	}
 	
 	public void turnOff() {
-		
+		if (this.isOn()) {
+			this.interruptor = false;
+			
+			this.neighbors.stream()
+				.forEach(Farola::turnOff);
+		}
 	}
 }
