@@ -1,6 +1,7 @@
 package ar.edu.unlp.objetos.uno.ejercicio4;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Balanza {
@@ -44,7 +45,7 @@ public class Balanza {
 	}
 	
 	public List<Producto> getProductos(){
-		return this.productos;
+		return new LinkedList<Producto>(this.productos);
 	}
 	
 }

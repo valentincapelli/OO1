@@ -2,9 +2,10 @@ package ar.edu.unlp.objetos.uno.ejercicio4;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
-public class Ticket extends Productos{
+public class Ticket {
 	private LocalDate fecha;
 	private List<Producto> productos;
 	
@@ -50,7 +51,7 @@ public class Ticket extends Productos{
 	}
 	
 	public List<Producto> getProductos(){
-		return this.productos;
+		return new LinkedList<Producto>(this.productos);
 	}
 
 }
