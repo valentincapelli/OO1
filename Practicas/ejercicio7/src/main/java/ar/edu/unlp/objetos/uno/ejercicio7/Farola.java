@@ -17,8 +17,10 @@ public class Farola {
 	}
 	
 	public void pairWithNeighbor(Farola farola) {
-		this.pairNeighbor(farola);
-		farola.pairNeighbor(this);
+		if (!this.neighbors.contains(farola)) {
+			this.pairNeighbor(farola);
+			farola.pairNeighbor(this);
+		}
 	}
 	
 	private void pairNeighbor(Farola farola) {
@@ -36,7 +38,7 @@ public class Farola {
 	public void turnOn() {
 		if (this.isOff()) {
 			this.interruptor = true;
-			for (Farola farola : this.neighbors) {
+			for (Farola farola : this.neighbors) {   // Usando for each
 				farola.turnOn();
 			}
 		}
@@ -44,10 +46,10 @@ public class Farola {
 	
 	public void turnOff() {
 		if (this.isOn()) {
-			this.interruptor = true; // false
+			this.interruptor = false;
 			
-			this.neighbors.stream()
-				.forEach(Farola::turnOff);
+			this.neighbors.stream()    // Usando stream
+				.forEach(Farola::turnOff); // a cada farola de la lista le aplica turnOff
 		}
 	}
 }

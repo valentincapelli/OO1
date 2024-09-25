@@ -1,0 +1,14 @@
+1)  Primer fragmento de codigo
+    (1) método +aportes de la clase Gerente
+    (2) metodo +montoBasico de la clase EmpleadoJerarquico
+
+Segundo fragmento de codigo
+    (1) método +SueldoBasico de la clase EmpleadoJerarquico
+    (2) método +SueldoBasico de la clase Empleado
+    (3) método +MontoBasico de la clase Empleado
+    (4) método +aportes de la clase Empleado
+    (3) método +bonoPorCategoria de la clase EmpleadoJerarquico
+
+2)  La variable aportesDeAlan tendria 2.850.
+
+La variable de sueldoBasicoDeAlan tendria 56.500.
