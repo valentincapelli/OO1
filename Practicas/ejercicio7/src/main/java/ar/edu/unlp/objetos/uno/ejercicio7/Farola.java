@@ -44,7 +44,7 @@ public class Farola {
 	
 	public void turnOff() {
 		if (this.isOn()) {
-			this.interruptor = false;
+			this.interruptor = true; // false
 			
 			this.neighbors.stream()
 				.forEach(Farola::turnOff);
