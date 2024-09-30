@@ -1,0 +1,14 @@
+a_ Consultar.
+
+b_ this hace referencia a la clase del objeto que este ejecutando ese
+metodo. Osea dependiendo de que objeto este ejecutando el metodo, this
+va a ser un objeto de una clase o de otra.
+
+c_ Porque asi esos metodos pueden ser llamados dentro de la misma clase
+donde fueron declarados, en subclases de esa clase, o en clases que
+esten dentro del mismo paquete.
+
+d_ Si se puede. Probado en clase Main.
+
+e_ Ejemplo de como se declara el metodo abstracto:
+	public abstract tipo/void nombreMetodo(tipo parametro);
