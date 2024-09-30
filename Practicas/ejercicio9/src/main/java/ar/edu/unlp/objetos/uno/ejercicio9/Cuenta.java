@@ -10,10 +10,6 @@ public abstract class Cuenta {
 	public double getSaldo() {
 		return this.saldo;
 	}
-	
-	protected void setSaldo(double monto) {  // Consultar visibilidad de este metodo
-		this.saldo = monto;
-	}
 
 	public void depositar(double monto) {
 		this.saldo += monto;
