@@ -16,12 +16,8 @@ public class Inversor {
 	}
 
 	public double valorActual() {
-		if (!this.inversiones.isEmpty()) {
-			return this.inversiones.stream()
+		return this.inversiones.stream()
 					.mapToDouble(inversion->inversion.valorActual()).sum();
-		}
-		else
-			return 0;
 	}
 
 	public String getNombre() {

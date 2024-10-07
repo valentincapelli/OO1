@@ -6,12 +6,14 @@ import java.util.List;
 public class ReporteDeConstruccion {
 	private List<Pieza> piezas;
 
+	public ReporteDeConstruccion(List<Pieza> piezas) {
+		this.piezas = piezas;
+	}
+	public ReporteDeConstruccion() {
+		this.piezas =  new LinkedList<Pieza>();
+	}
 	public List<Pieza> getPiezas() {
 		return new LinkedList<Pieza>(piezas);
-	}
-
-	public void setPiezas(List<Pieza> piezas) {
-		this.piezas = piezas;
 	}
 	public void agregarPieza(Pieza pieza) {
 		this.piezas.add(pieza);

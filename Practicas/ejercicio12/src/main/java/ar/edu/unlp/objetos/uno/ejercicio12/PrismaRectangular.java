@@ -19,20 +19,11 @@ public class PrismaRectangular extends Pieza{
 	public int getLadoMayor() {
 		return ladoMayor;
 	}
-	public void setLadoMayor(int ladoMayor) {
-		this.ladoMayor = ladoMayor;
-	}
 	public int getLadoMenor() {
 		return ladoMenor;
 	}
-	public void setLadoMenor(int ladoMenor) {
-		this.ladoMenor = ladoMenor;
-	}
 	public int getAltura() {
 		return altura;
-	}
-	public void setAltura(int altura) {
-		this.altura = altura;
 	}
 	@Override
 	public double getVolumen() {

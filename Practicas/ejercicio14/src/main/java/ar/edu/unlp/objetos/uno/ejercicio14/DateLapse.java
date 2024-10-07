@@ -14,14 +14,8 @@ public class DateLapse {
 	public LocalDate getFrom() {
 		return from;
 	}
-	public void setFrom(LocalDate from) {
-		this.from = from;
-	}
 	public LocalDate getTo() {
 		return to;
-	}
-	public void setTo(LocalDate to) {
-		this.to = to;
 	}
 	public int sizeInDays() {
 		return (int) from.until(to, ChronoUnit.DAYS);

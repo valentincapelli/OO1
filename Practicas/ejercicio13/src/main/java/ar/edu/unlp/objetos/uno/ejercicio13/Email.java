@@ -1,5 +1,6 @@
 package ar.edu.unlp.objetos.uno.ejercicio13;
 
+import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -8,6 +9,11 @@ public class Email {
 	private String cuerpo;
 	private List<Archivo> archivosAdjuntos;
 	
+	public Email(String titulo, String cuerpo) {
+		this.titulo = titulo;
+		this.cuerpo = cuerpo;
+		this.archivosAdjuntos = new LinkedList<Archivo>();
+	}
 	public void agregarArchivoAdjunto(Archivo archivo) {
 		this.archivosAdjuntos.add(archivo);
 	}
@@ -29,12 +35,8 @@ public class Email {
 	public void setArchivosAdjuntos(List<Archivo> archivosAdjuntos) {
 		this.archivosAdjuntos = archivosAdjuntos;
 	}
-	
 	public boolean buscar(String texto) {
-		if (this.titulo.contains(texto) || (this.cuerpo.contains(texto)))
-			return true;
-		else
-			return false;
+		return (this.titulo.contains(texto) || (this.cuerpo.contains(texto)));
 	}
 	
 	public int tamaño() {

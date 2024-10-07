@@ -10,7 +10,6 @@ public class ClienteDeCorreo {
 	public void agregarCarpeta(Carpeta carpeta) {
 		this.carpetas.add(carpeta);
 	}
-	
 	public List<Carpeta> getCarpetas() {
 		return new LinkedList<>(carpetas);
 	}

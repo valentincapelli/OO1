@@ -10,6 +10,10 @@ public abstract class Cuenta {
 	public double getSaldo() {
 		return this.saldo;
 	}
+	
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
+	}
 
 	public void depositar(double monto) {
 		this.saldo += monto;

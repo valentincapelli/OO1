@@ -1,11 +1,18 @@
 package ar.edu.unlp.objetos.uno.ejercicio13;
 
+import java.util.LinkedList;
 import java.util.List;
 
 public class Carpeta {
 	private String nombre;
 	private List<Email> emails;
 	
+	public Carpeta(String nombre, List<Email> emails) {
+		super();
+		this.nombre = nombre;
+		this.emails = new LinkedList<Email>();
+	}
+
 	public void agregarEmail(Email email) {
 		this.emails.add(email);
 	}
@@ -21,12 +28,9 @@ public class Carpeta {
 	}
 	
 	public void mover(Email email, Carpeta destino) {
-		if (this.emails.contains(email)) {
-			this.emails.remove(email);
-			destino.agregarEmail(email);
-			System.out.print("El mail se movio de carpeta.");
-		}
-		System.out.print("No se pudo mover el email.");
+		this.emails.remove(email);
+		destino.agregarEmail(email);
+		System.out.print("El mail se movio de carpeta.");
 	}
 	
 	public int espacioOcupado() {
