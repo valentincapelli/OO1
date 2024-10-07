@@ -12,18 +12,22 @@ public class ClienteDeCorreo {
 	}
 	
 	public List<Carpeta> getCarpetas() {
-		return new LinkedList(carpetas);
+		return new LinkedList<>(carpetas);
 	}
 	public Carpeta getInbox() {
 		return inbox;
+	}
+	public void recibir(Email email) {
+		this.inbox.agregarEmail(email);
 	}
 	
 	public Email buscar(String texto) {
 		Email e = this.inbox.buscar(texto);
 		if (e == null)
 			e = this.carpetas.stream()
-				.filter(carpeta->carpeta.buscar(texto))
-				.findFirst().orElse(null)
+				.map(carpeta->carpeta.buscar(texto))
+				.filter(email->email != null)
+				.findFirst().orElse(null);
 			
 		return e;
 	}
@@ -34,4 +38,5 @@ public class ClienteDeCorreo {
 				.mapToInt(carpeta->carpeta.espacioOcupado())
 				.sum();
 	}
+	
 }

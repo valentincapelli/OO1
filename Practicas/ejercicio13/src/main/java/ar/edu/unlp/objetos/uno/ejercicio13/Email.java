@@ -11,7 +11,6 @@ public class Email {
 	public void agregarArchivoAdjunto(Archivo archivo) {
 		this.archivosAdjuntos.add(archivo);
 	}
-	
 	public String getTitulo() {
 		return titulo;
 	}
@@ -30,6 +29,7 @@ public class Email {
 	public void setArchivosAdjuntos(List<Archivo> archivosAdjuntos) {
 		this.archivosAdjuntos = archivosAdjuntos;
 	}
+	
 	public boolean buscar(String texto) {
 		if (this.titulo.contains(texto) || (this.cuerpo.contains(texto)))
 			return true;
@@ -44,4 +44,5 @@ public class Email {
 				.mapToInt(archivo->archivo.tamaño())
 				.sum();
 	}
+	
 }
