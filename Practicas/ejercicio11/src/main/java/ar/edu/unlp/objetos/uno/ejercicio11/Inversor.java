@@ -9,10 +9,12 @@ public class Inversor {
 
 	public Inversor(String nombre, List<Inversion> inversiones) {
 		this.nombre = nombre;
+		this.inversiones = new LinkedList<>();
 		this.inversiones.addAll(inversiones);
 	}
 	
 	public Inversor() {
+		this.inversiones = new LinkedList<>();
 	}
 
 	public double valorActual() {
@@ -30,6 +32,10 @@ public class Inversor {
 
 	public List<Inversion> getInversiones() {
 		return new LinkedList<>(inversiones);
+	}
+	
+	public void agregarInversion(Inversion inversion) {
+		this.inversiones.add(inversion);
 	}
 	
 }

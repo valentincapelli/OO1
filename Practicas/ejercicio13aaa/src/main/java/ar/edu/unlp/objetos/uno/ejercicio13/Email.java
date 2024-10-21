@@ -2,6 +2,7 @@ package ar.edu.unlp.objetos.uno.ejercicio13;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Email {
 	private String titulo;

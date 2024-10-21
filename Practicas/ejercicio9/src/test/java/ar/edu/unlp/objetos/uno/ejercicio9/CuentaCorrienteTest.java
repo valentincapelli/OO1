@@ -25,7 +25,7 @@ public class CuentaCorrienteTest {
 	@Test
 	void testExtraerSinControlar() {
 		this.cc.extraerSinControlar(50);
-		assertEquals(100, this.cc.getSaldo());
+		assertEquals(50, this.cc.getSaldo());
 	}
 	
 	@Test
