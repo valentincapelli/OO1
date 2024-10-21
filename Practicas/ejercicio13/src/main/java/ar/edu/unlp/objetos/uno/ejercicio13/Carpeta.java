@@ -12,6 +12,10 @@ public class Carpeta {
 		this.nombre = nombre;
 		this.emails = new LinkedList<Email>();
 	}
+	
+	public Carpeta() {
+		this.emails = new LinkedList();
+	}
 
 	public void agregarEmail(Email email) {
 		this.emails.add(email);

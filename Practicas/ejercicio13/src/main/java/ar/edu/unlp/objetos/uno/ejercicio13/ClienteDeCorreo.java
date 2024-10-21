@@ -7,6 +7,10 @@ public class ClienteDeCorreo {
 	private List<Carpeta> carpetas;
 	private Carpeta inbox;
 	
+	public ClienteDeCorreo() {
+		this.carpetas = new LinkedList<>();
+		inbox = new Carpeta("Inbox", new LinkedList<>());
+	}
 	public void agregarCarpeta(Carpeta carpeta) {
 		this.carpetas.add(carpeta);
 	}
