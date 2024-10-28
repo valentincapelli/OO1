@@ -1,0 +1,19 @@
+Modelo del dominio: conceptos candidatos
+. Consumo 
+. Factura x
+. Usuario x
+. Nombre x
+. Domicilio x
+. Consumo de energia activa x
+. kWh
+. Consumo de energia reactiva x
+. kVArh
+. Costo
+. Cuadro tarifario
+. Precio
+. Fecha de emision x
+. Bonificacion x
+. Monto final x
+. Precio del kWh x 
+. Factor de potencia
+
