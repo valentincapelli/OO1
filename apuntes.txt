@@ -1,0 +1,54 @@
+Taller de diseño OO
+
+Star UML (para hacer uml)
+
+Criterios y heuristicas se podrian llevar al parcial.
+Leer criterios y heuristicas. !!!!!
+
+De la especificacion al diseño y al codigo. 
+Pasos:
+    Entender que debe hacer el sistema.
+    Identificar potenciales objetos, propiedades, relaciones.
+    Por cada caso de uso determinar cuales son los objetos involucrados
+    y que debe hacer cada uno.
+    Implementar las responsabilidades..
+
+Primero modelo conceptual, y despues implementacion.
+
+Identificar potenciales objetos, propiedades y relaciones.
+
+Hacer en la practica un ejercicio con la lista de sustantivos.
+
+Sitio
+Fanaticos
+Cine
+Fanaticos del cine
+Cinefilos
+Registro
+Peliculas x
+Peliculas que han visto
+Gustos
+Sugerencias
+Titulo x
+
+Buscar cuales son las clases seguras de la lista
+
+Pelicula
+
+Que cosas de la lista pueden ser atributos (de pelicula)
+
+Titulo
+
+Buscar cuales son las clases seguras de la lista (2da vez)
+
+Que cosas de la lista pueden ser atributos (2da vez)
+
+Podrian estar relacionadas?
+
+Diseñar primero lo mas facil, no lo mas interesante/dificil.
+
+*Dar mucha importancia al nombre de variables*
+
+No agregar nada que no esta en la especificacion
+
+Para cada caso de uso, asignar pre y post condiciones
