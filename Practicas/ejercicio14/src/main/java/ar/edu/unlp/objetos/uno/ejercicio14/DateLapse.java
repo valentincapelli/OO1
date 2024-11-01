@@ -23,4 +23,8 @@ public class DateLapse implements DateLapseInterface{
 	public boolean includesDate(LocalDate other) {
 		return other.isAfter(this.from) && other.isBefore(to);
 	}
+	@Override
+	public boolean overlaps(DateLapse anotherDateLapse) {
+	    return (this.from.isBefore(anotherDateLapse.getTo()) && this.to.isAfter(anotherDateLapse.getFrom()));
+	}
 }

@@ -4,4 +4,6 @@ import java.time.LocalDate;
 
 public interface DateLapseInterface {
 	public boolean includesDate(LocalDate other);
+	
+	public boolean overlaps (DateLapse anotherDateLapse);
 }

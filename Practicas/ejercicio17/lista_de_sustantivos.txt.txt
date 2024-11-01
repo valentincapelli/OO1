@@ -1,0 +1,23 @@
+Lista de sustantivos
+
+Plataforma
+Reservas x
+Propiedades x
+Reserva de propiedades
+Usuarios x
+Inmuebles
+Alquiler
+Nombre x
+Direccion x
+DNI x
+Nombre descriptivo x
+Precio 
+Propiedades disponibles
+Fecha inicial x
+Fecha final x
+Periodo
+Periodo de tiempo
+Cantidad de noches
+Precio por noche x
+Retribucion
+Precio total
