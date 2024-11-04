@@ -6,9 +6,9 @@ import java.util.List;
 
 public class Propiedad {
 	private Usuario usuario;
+	private String direccion;
 	private String nombreDescriptivo;
 	private double precioPorNoche;
-	private String direccion;
 	private List<Reserva> reservas;
 	
 	public Propiedad(Usuario usuario, String nombreDescriptivo, double precioPorNoche, String direccion) {

@@ -5,8 +5,8 @@ import java.util.List;
 
 public class Usuario {
 	private String nombre;
-	private String dni;
 	private String direccion;
+	private String dni;
 	private List<Propiedad> propiedades;
 	private List<Reserva> reservas;
 	
