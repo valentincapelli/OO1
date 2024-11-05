@@ -1,8 +1,9 @@
-package ar.edu.unlp.objetos.uno.ejercicio17;
+package ar.edu.unlp.objetos.uno.ejercicio18.ejercicio18;
 
 import java.time.LocalDate;
 
 import ar.edu.unlp.objetos.uno.ejercicio14.DateLapse;
+
 
 public class Reserva {
 	private Propiedad propiedad;
