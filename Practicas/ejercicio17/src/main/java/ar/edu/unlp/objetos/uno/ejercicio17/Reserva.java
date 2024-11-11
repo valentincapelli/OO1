@@ -24,11 +24,15 @@ public class Reserva {
 	}
 	
 	public double calcularPrecio() {
-		return duracion.sizeInDays() * this.propiedad.getPrecioPorNoche();
+		return this.duracion.sizeInDays() * this.propiedad.getPrecioPorNoche();
 	}
 	
 	public boolean seSuperpone(LocalDate inicio, LocalDate fin) {
 		DateLapse dl = new DateLapse(inicio, fin);
-		return dl.overlaps(duracion);
+		return dl.overlaps(this.duracion);
+	}
+	
+	public boolean estaEnCurso() {
+		return this.duracion.includesDate(LocalDate.now());
 	}
 }

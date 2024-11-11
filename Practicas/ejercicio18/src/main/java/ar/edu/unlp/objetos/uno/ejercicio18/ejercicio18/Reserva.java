@@ -19,17 +19,17 @@ public class Reserva {
 	public DateLapse getDuracion() {
 		return this.duracion;
 	}
-	
 	public void eliminarReserva() {
 		this.propiedad.eliminarReserva(this);
 	}
-	
 	public double calcularPrecio() {
 		return duracion.sizeInDays() * this.propiedad.getPrecioPorNoche();
 	}
-	
 	public boolean seSuperpone(LocalDate inicio, LocalDate fin) {
 		DateLapse dl = new DateLapse(inicio, fin);
 		return dl.overlaps(duracion);
+	}
+	public boolean estaEnCurso() {
+		return this.duracion.includesDate(LocalDate.now());
 	}
 }

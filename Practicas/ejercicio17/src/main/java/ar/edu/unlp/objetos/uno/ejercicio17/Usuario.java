@@ -46,8 +46,10 @@ public class Usuario {
 	}
 	
 	public void cancelarReserva(Reserva reserva) {
-		this.reservas.remove(reserva);
-		reserva.eliminarReserva();
+		if (reserva.estaEnCurso()) {
+			this.reservas.remove(reserva);
+			reserva.eliminarReserva();
+		}
 	}
 	
 	public double calcularIngresos(LocalDate inicio, LocalDate fin) {

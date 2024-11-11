@@ -10,13 +10,15 @@ public class Propiedad {
 	private String nombreDescriptivo;
 	private double precioPorNoche;
 	private List<Reserva> reservas;
+	private PoliticaDeCancelacion politica;
 	
-	public Propiedad(Usuario usuario, String nombreDescriptivo, double precioPorNoche, String direccion) {
+	public Propiedad(Usuario usuario, String nombreDescriptivo, double precioPorNoche, String direccion, PoliticaDeCancelacion politica) {
 		this.usuario = usuario;
 		this.nombreDescriptivo = nombreDescriptivo;
 		this.precioPorNoche = precioPorNoche;
 		this.direccion = direccion;
 		this.reservas = new ArrayList<>();
+		this.politica = politica;
 	}
 	public Usuario getUsuario() {
 		return this.usuario;
