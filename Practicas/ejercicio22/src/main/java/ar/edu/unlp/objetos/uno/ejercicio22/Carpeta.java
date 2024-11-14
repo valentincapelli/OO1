@@ -15,7 +15,7 @@ public class Carpeta {
 	public Carpeta(String nombre, List<Email> emails) {
 		super();
 		this.nombre = nombre;
-		this.emails = new LinkedList<Email>();
+		this.emails = emails;
 	}
 	
 	public Carpeta(String nombre) {
@@ -62,21 +62,10 @@ public class Carpeta {
 		return this.emails.size();
 	}
 	
-	public Map<String, Integer> cantidadEmailsPorCategoria(){
-		HashMap<String, Integer> map = new HashMap<>();
-		List<Email> pequeños = this.emails.stream()
-				.filter(email->email.tamaño() < 300)
-				.collect(Collectors.toList());
-		List<Email> medianos = this.emails.stream()
-				.filter(email->email.tamaño() > 300 && email.tamaño() < 500)
-				.collect(Collectors.toList());
-		List<Email> grandes = this.emails.stream()
-				.filter(email->email.tamaño() > 500)
-				.collect(Collectors.toList());
-		map.put("Pequeño", pequeños.size());
-		map.put("Mediano", medianos.size());
-		map.put("grandes", grandes.size());
-		return map;
+	public BagImpl<String> cantidadEmailsPorCategoria(){
+		BagImpl<String> bag = new BagImpl<>();
+		this.emails.forEach(email->bag.add(email.tipoDeTamaño()));
+		return bag;
 	}
 	
 }

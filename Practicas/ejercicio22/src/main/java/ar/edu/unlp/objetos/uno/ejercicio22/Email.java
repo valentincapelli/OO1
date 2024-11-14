@@ -46,4 +46,13 @@ public class Email {
 				.sum();
 	}
 	
+	public String tipoDeTamaño() {
+		if (this.tamaño() < 300)
+			return "Pequeño";
+		else if (this.tamaño() > 300 && this.tamaño() < 500)
+			return "Mediano";
+		else
+			return "Grande";
+	}
+	
 }

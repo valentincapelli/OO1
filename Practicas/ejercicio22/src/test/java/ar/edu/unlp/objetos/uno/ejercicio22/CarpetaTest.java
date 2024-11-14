@@ -46,8 +46,8 @@ public class CarpetaTest {
 	
 	@Test
 	void testCantidadEmailPorCategoria() {
-		assertEquals(0, carpeta.cantidadEmailsPorCategoria().get("Pequeño"));
-		assertEquals(0, carpeta.cantidadEmailsPorCategoria().get("Mediano"));
-		assertEquals(0, carpeta.cantidadEmailsPorCategoria().get("Grande"));
+		assertEquals(0, carpeta.cantidadEmailsPorCategoria().occurrencesOf("Pequeño"));
+		assertEquals(0, carpeta.cantidadEmailsPorCategoria().occurrencesOf("Mediano"));
+		assertEquals(0, carpeta.cantidadEmailsPorCategoria().occurrencesOf("Grande"));
 	}
 }
