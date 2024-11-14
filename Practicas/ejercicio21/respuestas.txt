@@ -1,0 +1,119 @@
+a_ AbstractMap, Attributes, AuthProvider, ConcurrentHashMap, ConcurrentSkipListMap,
+ EnumMap, HashMap, Hashtable, Headers, IdentityHashMap, LinkedHashMap, 
+ PrinterStateReasons, Properties, Provider, RenderingHints, ScriptObjectMirror, 
+ SimpleBindings, TabularDataSupport, TreeMap, UIDefaults, WeakHashMap
+ 
+Java proporciona varias implementaciones de Map, pero las más comunes y 
+destinadas a uso general son las que forman parte del paquete java.util. 
+Estas son:
+
+HashMap
+LinkedHashMap
+TreeMap
+WeakHashMap
+ConcurrentHashMap
+IdentityHashMap
+
+b_ Para saber si un diccionario tiene cierta clave usamos:
+boolean	containsKey​(Object key)
+
+Para que el método containsKey funcione correctamente, las claves (o keys) deben 
+implementar de manera adecuada los métodos equals y hashCode. Esto es crucial 
+porque Map utiliza estos métodos para comparar claves.
+
+c_ Con este método se puede recuperar el objeto asociado a una clave:
+	get​(Object key)
+
+Si la clave no se encuentra en el Map, devuelve null.
+
+d_ Para agregar claves y valores a un mapa en Java, se usa el método 
+put(K key, V value), que es parte de la interfaz Map. Este método inserta una 
+entrada en el mapa asociando la clave especificada (key) con el valor 
+especificado (value).
+
+Si una clave ya existe en el mapa y se usa put para agregarla nuevamente, el 
+valor anterior será reemplazado por el nuevo valor. El método put devuelve el 
+valor anterior asociado con la clave, o null si la clave no existía antes en el 
+mapa.
+
+Implementación		Claves nulas		Valores nulos
+HashMap				Sí (una sola)		Sí
+LinkedHashMap		Sí (una sola)		Sí
+TreeMap				No					Sí
+Hashtable			No					No
+
+e_  Método remove(Object key)
+Este método elimina la entrada asociada con la clave especificada si está presente en el mapa. 
+Devuelve el valor asociado a la clave que se eliminó o null si la clave no estaba en el mapa.
+
+ Método remove(Object key, Object value)
+Este método elimina la entrada del mapa solo si la clave está presente y está asociada con 
+el valor especificado. Devuelve true si la entrada fue eliminada, o false si la clave o el 
+valor no coincidían.
+
+No es estrictamente necesario controlar si la clave o el valor están presentes antes de 
+llamar a remove, ya que los métodos remove manejan automáticamente las situaciones en las 
+que la clave no existe.
+
+f_
+Método									Condiciones												Retorno
+
+replace(K key, V value)					Reemplaza si la clave ya existe							Valor anterior o null
+replace(K key, V oldValue, V newValue)	Reemplaza si la clave existe y coincide con oldValue	true si reemplazó, false si no
+put(K key, V value)						Siempre reemplaza (o inserta si no existe)				Valor anterior o null
+
+g_ 
+1. Iterar usando keySet()
+El método keySet() devuelve un Set que contiene todas las claves del mapa. Este enfoque 
+permite iterar sobre las claves y obtener los valores asociados usando get(key).
+
+for (String key : map.keySet()) {
+    Integer value = map.get(key);
+    System.out.println("Clave: " + key + ", Valor: " + value);
+}
+
+2. Iterar usando values()
+El método values() devuelve una colección (Collection<V>) de todos los valores en el mapa, 
+sin incluir las claves. Este enfoque es útil si solo necesitamos trabajar con los valores y 
+no con las claves.
+
+for (Integer value : map.values()) {
+    System.out.println("Valor: " + value);
+}
+
+3. Iterar usando entrySet()
+El método entrySet() devuelve un conjunto (Set<Map.Entry<K, V>>) de todas las entradas 
+(pares clave-valor) en el mapa. Este es el método más eficiente cuando se necesita acceder 
+tanto a las claves como a los valores, ya que evita realizar búsquedas repetitivas con get(key).
+
+for (Map.Entry<String, Integer> entry : map.entrySet()) {
+    System.out.println("Clave: " + entry.getKey() + ", Valor: " + entry.getValue());
+}
+
+4. Iterar usando forEach() con una expresión lambda
+Desde Java 8, se puede usar el método forEach() junto con una expresión lambda para iterar 
+sobre cada entrada en el mapa de una manera más concisa.
+
+map.forEach((key, value) -> System.out.println("Clave: " + key + ", Valor: " + value));
+5. Iterar usando Streams
+Java 8 introdujo Streams, que permiten realizar operaciones de procesamiento más avanzadas y 
+funcionales en las colecciones, incluyendo Map. Para iterar un mapa usando Streams, se pueden 
+transformar las entradas (entrySet()) a un Stream y luego aplicar operaciones como filter, map, 
+forEach, etc.
+
+Ejemplo: Imprimir solo las entradas donde el valor es mayor a 10
+
+map.entrySet().stream()
+    .filter(entry -> entry.getValue() > 10)
+    .forEach(entry -> System.out.println("Clave: " + entry.getKey() + ", Valor: " + entry.getValue()));
+    
+ 
+
+  Explique cómo implementaría un Bag<T> usando composición con un Map<K, V>. 
+  ¿De qué tipo tendrían que ser las claves y valores del Map?
+  Usaria una estructura Map, utilizando la clave de tipo T y los valores de las 
+  claves serian la cardinalidad de cada elemento, osea seria un integer.
+  
+
+
+
